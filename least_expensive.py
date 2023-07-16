@@ -10,7 +10,13 @@ def least_expensive(file_path: str) -> str:
     Returns:
         str: least expensive item
     """
-    pass
+    file_path=open('data.json')
+    x=json.load(file_path)
+    arzon = float("inf")
+    for item,value in x.items():
+        if value<arzon:
+            arzon=value
+    return arzon
 
 # test
 file_path = "data.json"
